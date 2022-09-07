@@ -1,4 +1,4 @@
-void CTest2Dlg::OnBnClickedButton1()
+void CCal2Dlg::OnBnClickedButton1()
 {
 	// TODO: Add your control notification handler code here
 	UpdateData(true);
