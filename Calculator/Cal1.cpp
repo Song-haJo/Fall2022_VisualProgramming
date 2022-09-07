@@ -1,4 +1,4 @@
-void C[project name]Dlg::OnBnClickedButton1()
+void CCal1Dlg::OnBnClickedButton1()
 {
 	// TODO: Add your control notification handler code here
 	int a, b, c;
