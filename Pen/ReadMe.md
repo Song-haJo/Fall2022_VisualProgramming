@@ -17,12 +17,8 @@
 5. Close the window that popped up and start to modify the dialog box.
 6. Remove "ICD_STATIC1 (Text Control)."
 7. Select the dialog box and click "Messages" in properties. Then, choose "<Add> OnMouseMove" in the combo box of "WM_MOUSEMOVE".
-8. .
-9. Select the three edit controls and set "center" for the text align in properties.
-10. Select the button and change its caption to "+," which means "add."
-11. Double-click the button to see the code of the .cpp file.
-12. Add some code referring to the Cal1.cpp.
-13. Check if the function works well with Local Windows Debugger.
+8. Add some code referring to the Cal1.cpp.
+9. Check if the function works well with Local Windows Debugger.
 
 ## 2
 Start with the state that finished step 10.
