@@ -21,4 +21,7 @@ There are two ways to make a calculator.
 12. Add some code referring to the Cal1.cpp.
 13. Check if the function works well with Local Windows Debugger.
 
-##2
+## 2
+Start with the state that finished step 11.
+12. Add some code referring to the Cal2.cpp.
+13. Check if the function works well with Local Windows Debugger.
