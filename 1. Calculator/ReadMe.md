@@ -25,6 +25,7 @@ There are two ways to make a calculator.
 Start with the state that finished step 10.
 <ol start="11">
   <li>Choose an edit control, and right-click it. Then, in "Add variable," change to "value" for the category, change to "int" for the variable type, and name it as vA(: Value A).</li>
+  <p>- If you set wrong, you can correct directly with Cal2Dlg.cpp file and Cal2Dlg.h file</p>
   <li>Do "Step 11" for each edit control.</li> 
   <li>Add some code referring to the Cal2.cpp.</li>
   <li>Check if the function works well with Local Windows Debugger.</li>
