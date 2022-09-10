@@ -47,3 +47,21 @@ void CCustomizablePenDlg::OnBnClickedButton1()
 		col = dlg.GetColor();
 	}
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Fourth Part /////////////////////////////////////
+
+BEGIN_MESSAGE_MAP(CCustomizablePenDlg, CDialogEx)
+	ON_WM_SYSCOMMAND()
+	ON_WM_PAINT()
+	ON_WM_QUERYDRAGICON()
+	ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER1, &CCustomizablePenDlg::OnNMCustomdrawSlider1)
+	ON_WM_MOUSEMOVE()
+	ON_BN_CLICKED(IDC_BUTTON1, &CCustomizablePenDlg::OnBnClickedButton1)
+	ON_COMMAND(ID_SIZE_4, OnMenuSize4)		// Line to add
+	ON_COMMAND(ID_SIZE_8, OnMenuSize8)		// Line to add
+	ON_COMMAND(ID_SIZE_16, OnMenuSize16)		// Line to add
+BEGIN_MESSAGE_MAP()
+
+	
