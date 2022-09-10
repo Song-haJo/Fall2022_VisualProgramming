@@ -1,5 +1,5 @@
-CPoint oldPt;
-void CPen1Dlg::OnMouseMove(UINT nFlags, CPoint point)
+CPoint oldPt;			// oldPt = old point
+void CPenDlg::OnMouseMove(UINT nFlags, CPoint point)
 {
 	// TODO: Add your message handler code here and/or call default
 
@@ -10,7 +10,7 @@ void CPen1Dlg::OnMouseMove(UINT nFlags, CPoint point)
 		dc.MoveTo(oldPt);
 		dc.LineTo(point);
 	}
-	oldPt = point;  // Update the location of mouse pointer.
+	oldPt = point;  	// Update the location of mouse pointer.
 
 	CDialogEx::OnMouseMove(nFlags, point);
 }
