@@ -15,7 +15,7 @@ There are two ways to make a calculator.
 6. Remove "ICD_STATIC1 (Text Control)."
 7. Select the dialog box and increase the font size for easy accessibility. Then, adjust the dialog box size.
 8. Add 3 Edit Controls and 1 Button, then arrange them to let the audience understand the function intuitively.
-9. Select the three edit controls and set "center" for the text align in properties.
+9. Select the three Edit Controls and set "center" for the text align in properties.
 10. Select the button and change its caption to "+," which means "add."
 11. Double-click the button to see the code of the .cpp file.
 12. Add some code referring to the Cal1.cpp.
