@@ -62,7 +62,7 @@ BEGIN_MESSAGE_MAP(CCustomizablePenDlg, CDialogEx)
 	ON_COMMAND(ID_SIZE_4, OnMenuSize4)		// Line to add	(Function name: OnMenuSize4)
 	ON_COMMAND(ID_SIZE_8, OnMenuSize8)		// Line to add	(Function name: OnMenuSize8)
 	ON_COMMAND(ID_SIZE_16, OnMenuSize16)		// Line to add	(Function name: OnMenuSize16)
-BEGIN_MESSAGE_MAP()
+END_MESSAGE_MAP()
 
 	
 ///////////////////////////////////////////////////////////////////////////////////////
