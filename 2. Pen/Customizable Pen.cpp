@@ -37,3 +37,13 @@ void CCustomizablePenDlg::OnMouseMove(UINT nFlags, CPoint point)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// Third  Part /////////////////////////////////////
+
+void CCustomizablePenDlg::OnBnClickedButton1()
+{
+	// TODO: Add your control notification handler code here
+	CColorDialog dlg;
+	if (dlg.DoModal() == IDOK)
+	{
+		col = dlg.GetColor();
+	}
+}
