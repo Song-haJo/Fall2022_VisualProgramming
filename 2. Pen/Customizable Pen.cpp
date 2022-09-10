@@ -88,3 +88,48 @@ void CCustomizablePenDlg::OnMenuSize16()
 	n = 16;
 	MessageBox(L"Size changed to 16 px.");
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Sixth  Part /////////////////////////////////////
+
+BEGIN_MESSAGE_MAP(CCustomizablePenDlg, CDialogEx)
+	ON_WM_SYSCOMMAND()
+	ON_WM_PAINT()
+	ON_WM_QUERYDRAGICON()
+	ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER1, &CCustomizablePenDlg::OnNMCustomdrawSlider1)
+	ON_WM_MOUSEMOVE()
+	ON_BN_CLICKED(IDC_BUTTON1, &CCustomizablePenDlg::OnBnClickedButton1)
+	ON_COMMAND(ID_SIZE_4, OnMenuSize4)
+	ON_COMMAND(ID_SIZE_8, OnMenuSize8)
+	ON_COMMAND(ID_SIZE_16, OnMenuSize16)
+	ON_COMMAND(ID_COLOR_RED, OnMenuColorR)		// Line to add	(Function name: OnMenuColorR)
+	ON_COMMAND(ID_COLOR_GREEN, OnMenuColorG)	// Line to add	(Function name: OnMenuColorG)
+	ON_COMMAND(ID_COLOR_BLUE, OnMenuColorB)		// Line to add	(Function name: OnMenuColorB)
+END_MESSAGE_MAP()
+	
+///////////////////////////////////////////////////////////////////////////////////////
+	
+void CCustomizablePenDlg::OnMenuColorR()
+{
+	// TODO: Add your implementation code here.
+	col = RGB(255, 0, 0);
+	MessageBox(L"Color changed to red.");
+}
+
+
+void CCustomizablePenDlg::OnMenuColorG()
+{
+	// TODO: Add your implementation code here.
+	col = RGB(0, 255, 0);
+	MessageBox(L"Color changed to green.");
+}
+
+
+void CCustomizablePenDlg::OnMenuColorB()
+{
+	// TODO: Add your implementation code here.
+	col = RGB(0, 0, 255);
+	MessageBox(L"Color changed to blue.");
+}
+	
