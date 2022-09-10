@@ -75,7 +75,7 @@ void CCustomizablePenDlg::OnMenuSize4()
 	MessageBox(L"Size changed to 4 px.")
 }
 
-void CCustomizablePenDlg::OnMenuSize16()
+void CCustomizablePenDlg::OnMenuSize8()
 {
 	// TODO: Add your implementation code here.
 	n = 8;
