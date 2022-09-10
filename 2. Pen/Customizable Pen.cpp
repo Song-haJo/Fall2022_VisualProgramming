@@ -59,9 +59,9 @@ BEGIN_MESSAGE_MAP(CCustomizablePenDlg, CDialogEx)
 	ON_NOTIFY(NM_CUSTOMDRAW, IDC_SLIDER1, &CCustomizablePenDlg::OnNMCustomdrawSlider1)
 	ON_WM_MOUSEMOVE()
 	ON_BN_CLICKED(IDC_BUTTON1, &CCustomizablePenDlg::OnBnClickedButton1)
-	ON_COMMAND(ID_SIZE_4, OnMenuSize4)		// Line to add
-	ON_COMMAND(ID_SIZE_8, OnMenuSize8)		// Line to add
-	ON_COMMAND(ID_SIZE_16, OnMenuSize16)		// Line to add
+	ON_COMMAND(ID_SIZE_4, OnMenuSize4)		// Line to add	(Function name: OnMenuSize4)
+	ON_COMMAND(ID_SIZE_8, OnMenuSize8)		// Line to add	(Function name: OnMenuSize8)
+	ON_COMMAND(ID_SIZE_16, OnMenuSize16)		// Line to add	(Function name: OnMenuSize16)
 BEGIN_MESSAGE_MAP()
 
 	
