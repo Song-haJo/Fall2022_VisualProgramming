@@ -1,15 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// First  Part /////////////////////////////////////
 
-// First Part
-
+int n;
 void CEarthwormDlg::OnNMCustomdrawSlider1(NMHDR* pNMHDR, LRESULT* pResult)
 {
 	LPNMCUSTOMDRAW pNMCD = reinterpret_cast<LPNMCUSTOMDRAW>(pNMHDR);
 	// TODO: Add your control notification handler code here
 	*pResult = 0;
 	CString pos;
-	int n = sz_Slider.GetPos();
+	n = sz_Slider.GetPos();
 	pos.Format(L"%d", n);
 	SetWindowText(pos);
 }
