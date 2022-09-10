@@ -38,10 +38,23 @@ Start with the state that finished step 8 of the guideline for Earthworm.
 <ol start="9">
   <li>Right-click the Slider Control again and click "Add Event Handler." Then, select "CCustomizablePenDlg" in the Class list, keep others(the message type must be "NM_CUSTOMDRAW"), and click "Ok."</li>
   <li>Add some code from the first part of Earthworm.cpp file in this folder to your "Customizable PenDlg.cpp" file.</li>
-  <li>Come back to the "Customizable Pen.rc (Dialog file)." Select the dialog box and click "Messages" in the properties window. Then, choose "<Add> OnMouseMove" in the combo box of "WM_MOUSEMOVE."</li>
+  <li>Come back to the "CustomizablePen.rc (Dialog)." Select the dialog box and click "Messages" in the properties window. Then, choose "<Add> OnMouseMove" in the combo box of "WM_MOUSEMOVE."</li>
   <li>Add some code, from the second part of "Customizable Pen.cpp" file in this folder, below the first part of your "Customizable PenDlg.cpp" file.</li>
-  <li>Come back to the "Customizable Pen.rc (Dialog file)" and add a Button on the right of the slider. Then, select the button and change its caption to "Color."</li>
+  <li>Come back to the "CustomizablePen.rc (Dialog file)" and add a Button on the right of the slider. Then, select the button and change its caption to "Color."</li>
   <li>Double-click the button to see the code of the "Customizable Pen.cpp" file.</li>
   <li>Add some code, from the third part of "Customizable Pen.cpp" file in this folder, below the second part of your "Customizable PenDlg.cpp" file.</li>
   <li>Check if the function works well with Local Windows Debugger.</li>
 </ol>
+  
+  
+  
+  
+  ---------
+## +
+  1. To make menus, right-click the "Resource Files" folder on the "Solution Explorer". Then, click "Resource" among the "Add" options.
+  2. Select "Menu" on the "Add Resource" window.
+  3. In the "CustomizablePen.rc (Menu)," type "Size" and add "4," "8," and "16" as child items under "Size".
+  4. In the "Customizable PenDlg.cpp" file, add some code from the fourth part of "Customizable Pen.cpp" file in this folder to the BEGIN/END_MESSAGE_MAP section.
+  5. On the "Class View," right-click "CCustomizablePenDlg" and click the "Add Function" among "Add" options.
+  6. Type the function name and set the Return type "void." Then, click "OK."
+  7. Add some code, from the fifth part of "Customizable Pen.cpp" file in this folder, below the first part of your "Customizable PenDlg.cpp" file.
