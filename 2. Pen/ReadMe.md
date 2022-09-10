@@ -50,11 +50,13 @@ Start with the state that finished step 8 of the guideline for Earthworm.
   
   
   ---------
-## +
+## +α How to make menus(Continued from step 16 of the guideline for Customizable Pen.
   1. To make menus, right-click the "Resource Files" folder on the "Solution Explorer". Then, click "Resource" among the "Add" options.
   2. Select "Menu" on the "Add Resource" window.
   3. In the "CustomizablePen.rc (Menu)," type "Size" and add "4," "8," and "16" as child items under "Size".
   4. In the "Customizable PenDlg.cpp" file, add some code from the fourth part of "Customizable Pen.cpp" file in this folder to the BEGIN/END_MESSAGE_MAP section.
   5. On the "Class View," right-click "CCustomizablePenDlg" and click the "Add Function" among "Add" options.
   6. Type the function name and set the Return type "void." Then, click "OK."
-  7. Add some code, from the fifth part of "Customizable Pen.cpp" file in this folder, below the first part of your "Customizable PenDlg.cpp" file.
+  7. Do "Step 6" for each function.
+  8. Add some code, from the fifth part of "Customizable Pen.cpp" file in this folder, below the third part of your "Customizable PenDlg.cpp" file.
+  9. Come back to the "CustomizablePen.rc (Dialog)." Select the dialog box and choose "IDR_MENU1" in the combo box of "Menu" under "Misc" category in the properties window.
