@@ -5,7 +5,7 @@
 
 
 -------
-## Requirements
+### Requirements
 - Green
 - 8 px
 
@@ -48,8 +48,7 @@ Start with the state that finished step 8 of the guideline for Earthworm.
   
   
   
-  
-  ---------
+
 ## +α How to make menus(Continued from step 16 of the guideline for Customizable Pen.
   1. To make menus, right-click the "Resource Files" folder on the "Solution Explorer". Then, click "Resource" among the "Add" options.
   2. Select "Menu" on the "Add Resource" window.
@@ -60,3 +59,8 @@ Start with the state that finished step 8 of the guideline for Earthworm.
   7. Do "Step 6" for each function.
   8. Add some code, from the fifth part of "Customizable Pen.cpp" file in this folder, below the third part of your "Customizable PenDlg.cpp" file.
   9. Come back to the "CustomizablePen.rc (Dialog)." Select the dialog box and choose "IDR_MENU1" in the combo box of "Menu" under "Misc" category in the properties window.
+  10. Check if the function works well with Local Windows Debugger.
+  
+  
+## Questions
+  - How to update the window title when applying the menu function?
