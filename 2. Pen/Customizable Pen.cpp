@@ -65,3 +65,26 @@ BEGIN_MESSAGE_MAP(CCustomizablePenDlg, CDialogEx)
 BEGIN_MESSAGE_MAP()
 
 	
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Fifth  Part /////////////////////////////////////
+
+void CCustomizablePenDlg::OnMenuSize4()
+{
+	// TODO: Add your implementation code here.
+	n = 4;
+	MessageBox(L"Size changed to 4 px.")
+}
+
+void CCustomizablePenDlg::OnMenuSize16()
+{
+	// TODO: Add your implementation code here.
+	n = 8;
+	MessageBox(L"Size changed to 8 px.")
+}
+
+void CCustomizablePenDlg::OnMenuSize16()
+{
+	// TODO: Add your implementation code here.
+	n = 16;
+	MessageBox(L"Size changed to 16 px.")
+}
