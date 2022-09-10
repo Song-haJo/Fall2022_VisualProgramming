@@ -60,6 +60,9 @@ Start with the state that finished step 8 of the guideline for Earthworm.
   8. Add some code, from the fifth part of "Customizable Pen.cpp" file in this folder, below the third part of your "Customizable PenDlg.cpp" file.
   9. Come back to the "CustomizablePen.rc (Dialog)." Select the dialog box and choose "IDR_MENU1" in the combo box of "Menu" under "Misc" category in the properties window.
   10. Check if the function works well with Local Windows Debugger.
+  11. You can manage colors with menu by repeating Step 3-8.
+    - You need to add menus by creating new category "Color" on the right of "Size."
+    - You can add the code referring to the sixth part.
   
   
 ## Questions
