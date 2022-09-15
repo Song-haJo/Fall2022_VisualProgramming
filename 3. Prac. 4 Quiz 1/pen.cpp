@@ -1,4 +1,4 @@
-void Cmfc01Dlg::OnBnClickedButton1()				// When you click Button1, you can use the Color Dialog.
+void CAssignmentDlg::OnBnClickedButton1()				// When you click Button1, you can use the Color Dialog.
 {
 	// TODO: Add your control notification handler code here
 	CColorDialog dlg;
@@ -8,7 +8,7 @@ void Cmfc01Dlg::OnBnClickedButton1()				// When you click Button1, you can use t
 }
 
 
-void Cmfc01Dlg::OnMouseMove(UINT nFlags, CPoint point)		// When you drag with the left mouse button, you can draw with your pen.
+void CAssignmentDlg::OnMouseMove(UINT nFlags, CPoint point)		// When you drag with the left mouse button, you can draw with your pen.
 {
 	// TODO: Add your message handler code here and/or call default
 	if (nFlags & MK_LBUTTON) {
@@ -23,28 +23,28 @@ void Cmfc01Dlg::OnMouseMove(UINT nFlags, CPoint point)		// When you drag with th
 }
 
 
-void Cmfc01Dlg::OnSel1()					// When you click the submenu 1, you can set your pen size as 1 px.
+void CAssignmentDlg::OnSel1()					// When you click the submenu 1, you can set your pen size as 1 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 1;
 }
 
 
-void Cmfc01Dlg::OnSel8()					// When you click the submenu 8, you can set your pen size as 8 px.
+void CAssignmentDlg::OnSel8()					// When you click the submenu 8, you can set your pen size as 8 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 8;
 }
 
 
-void Cmfc01Dlg::OnSel16()					// When you click the submenu 16, you can set your pen size as 16 px.
+void CAssignmentDlg::OnSel16()					// When you click the submenu 16, you can set your pen size as 16 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 16;
 }
 
 
-void Cmfc01Dlg::OnSelColor()					// When you click the submenu Color, you can use the Color Dialog.
+void CAssignmentDlg::OnSelColor()					// When you click the submenu Color, you can use the Color Dialog.
 {
 	// TODO: Add your command handler code here
 	// Choose one between Option 1 and 2
@@ -61,7 +61,7 @@ void Cmfc01Dlg::OnSelColor()					// When you click the submenu Color, you can us
 }
 
 
-BOOL Cmfc01Dlg::PreTranslateMessage(MSG* pMsg)			// When you press the "R," "G," or "B" key, you can change the pen color to Red, Green, or Blue.
+BOOL CAssignmentDlg::PreTranslateMessage(MSG* pMsg)			// When you press the "R," "G," or "B" key, you can change the pen color to Red, Green, or Blue.
 {
 	// TODO: Add your specialized code here and/or call the base class
 	if (pMsg->message == WM_KEYDOWN) {
@@ -74,11 +74,20 @@ BOOL Cmfc01Dlg::PreTranslateMessage(MSG* pMsg)			// When you press the "R," "G,"
 }
 
 
-void Cmfc01Dlg::OnNMCustomdrawSlider1(NMHDR* pNMHDR, LRESULT* pResult)	// This will get you the number of the slider's position.
+void CAssignmentDlg::OnNMCustomdrawSlider1(NMHDR* pNMHDR, LRESULT* pResult)	// This will get you the number of the slider's position.
 {
 	LPNMCUSTOMDRAW pNMCD = reinterpret_cast<LPNMCUSTOMDRAW>(pNMHDR);
 	// TODO: Add your control notification handler code here
 	m_Size = m_Slider.GetPos();
 
 	*pResult = 0;
+}
+
+void CAssignmentDlg::OnContextMenu(CWnd* pWnd, CPoint point)
+{
+	// TODO: Add your message handler code here
+	CMenu mn;
+	mn.LoadMenu(IDR_MENU1);
+	CMenu* p = mn.GetSubMenu(0);
+	p->TrackPopupMenu(NULL, point.x, point.y, this, NULL);
 }
