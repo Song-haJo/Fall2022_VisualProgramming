@@ -92,7 +92,7 @@ void CAssignmentDlg::OnNMCustomdrawSlider1(NMHDR* pNMHDR, LRESULT* pResult)	// T
 	*pResult = 0;
 }
 
-void CAssignmentDlg::OnContextMenu(CWnd* pWnd, CPoint point)
+void CAssignmentDlg::OnContextMenu(CWnd* pWnd, CPoint point)		// When you right-click, you can see the context menu.
 {
 	// TODO: Add your message handler code here
 	CMenu mn;
