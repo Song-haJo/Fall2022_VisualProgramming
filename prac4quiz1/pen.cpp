@@ -1,14 +1,14 @@
-void Cmfc01Dlg::OnBnClickedButton1()
+void Cmfc01Dlg::OnBnClickedButton1()				// When you click Button1, you can use the Color Dialog.
 {
 	// TODO: Add your control notification handler code here
 	CColorDialog dlg;
-	if (dlg.DoModal() == IDOK) {		// IDOK = colorDialog 내 확인 버튼
+	if (dlg.DoModal() == IDOK) {		// IDOK = OK Button in the Color Dialog 
 		m_Col = dlg.GetColor();
 	}
 }
 
 
-void Cmfc01Dlg::OnMouseMove(UINT nFlags, CPoint point)
+void Cmfc01Dlg::OnMouseMove(UINT nFlags, CPoint point)		// When you drag with the left mouse button, you can draw with your pen.
 {
 	// TODO: Add your message handler code here and/or call default
 	if (nFlags & MK_LBUTTON) {
@@ -23,28 +23,28 @@ void Cmfc01Dlg::OnMouseMove(UINT nFlags, CPoint point)
 }
 
 
-void Cmfc01Dlg::OnSel1()
+void Cmfc01Dlg::OnSel1()					// When you click the submenu 1, you can set your pen size as 1 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 1;
 }
 
 
-void Cmfc01Dlg::OnSel8()
+void Cmfc01Dlg::OnSel8()					// When you click the submenu 8, you can set your pen size as 8 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 8;
 }
 
 
-void Cmfc01Dlg::OnSel16()
+void Cmfc01Dlg::OnSel16()					// When you click the submenu 16, you can set your pen size as 16 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 16;
 }
 
 
-void Cmfc01Dlg::OnSelColor()
+void Cmfc01Dlg::OnSelColor()					// When you click the submenu Color, you can use the Color Dialog.
 {
 	// TODO: Add your command handler code here
 	// 1안과 2안 중 하나만 적으면 된다.
@@ -54,7 +54,7 @@ void Cmfc01Dlg::OnSelColor()
 	// 2안
 	/*
 	CColorDialog dlg;
-	if (dlg.DoModal() == IDOK) {		// IDOK = colorDialog 내 확인 버튼
+	if (dlg.DoModal() == IDOK) {		// IDOK = OK Button in the Color Dialog 
 		m_Col = dlg.GetColor();
 	}
 	*/
