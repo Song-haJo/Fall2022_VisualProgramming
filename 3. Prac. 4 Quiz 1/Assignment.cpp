@@ -74,7 +74,7 @@ BOOL CAssignmentDlg::PreTranslateMessage(MSG* pMsg)			// When you press the "R,"
 {
 	// TODO: Add your specialized code here and/or call the base class
 	if (pMsg->message == WM_KEYDOWN) {
-		if (pMsg->wParam == 'R') m_Col = RGB(255, 0, 0);	// For the condition, you need to use capital letters
+		if (pMsg->wParam == 'R') m_Col = RGB(255, 0, 0);	// For the condition, you need to use capital letters and single quotation marks
 		if (pMsg->wParam == 'G') m_Col = RGB(0, 255, 0);	// to let your computer recognize both upper and lower cases.
 		if (pMsg->wParam == 'B') m_Col = RGB(0, 0, 255);
 	}
