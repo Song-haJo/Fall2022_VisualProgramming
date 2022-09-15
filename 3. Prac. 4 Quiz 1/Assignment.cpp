@@ -1,3 +1,12 @@
+/*
+How to make a pen with...
+	- Context Menu
+	- Color Dialog
+	- Slider
+	- Key Sensing
+*/
+
+
 void CAssignmentDlg::OnBnClickedButton1()				// When you click Button1, you can use the Color Dialog.
 {
 	// TODO: Add your control notification handler code here
