@@ -23,21 +23,21 @@ void CAssignmentDlg::OnMouseMove(UINT nFlags, CPoint point)		// When you drag wi
 }
 
 
-void CAssignmentDlg::OnSel1()					// When you click the submenu 1, you can set your pen size as 1 px.
+void CAssignmentDlg::OnSel1()						// When you click the submenu 1, you can set your pen size as 1 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 1;
 }
 
 
-void CAssignmentDlg::OnSel8()					// When you click the submenu 8, you can set your pen size as 8 px.
+void CAssignmentDlg::OnSel8()						// When you click the submenu 8, you can set your pen size as 8 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 8;
 }
 
 
-void CAssignmentDlg::OnSel16()					// When you click the submenu 16, you can set your pen size as 16 px.
+void CAssignmentDlg::OnSel16()						// When you click the submenu 16, you can set your pen size as 16 px.
 {
 	// TODO: Add your command handler code here
 	m_Size = 16;
