@@ -32,5 +32,5 @@ On the Solution Explorer, right-click the [Header Files] and click [Add]>[New It
 Select [Header File (.h)] and click [Add].
 -------------------------------------------------------------------------------------------------*/
 #pragma once					//
-						//
+#include "pch.h"				// C
 extern "C" int PASCAL EXPORT Add(int a, int b);	// C
