@@ -6,7 +6,7 @@ Then, click [Create]. Then, set as below.
 	- [Application type]: Dialog based
 Click [Finish].
 Remove {IDC_STATIC1 (Text Control)} and add three {Edit Control}s and three {Button}s.
-Set the first button as below.
+Set the Button1 as below.
 	- [Caption]: Add1
 -------------------------------------------------------------------------------------------------*/
 
@@ -49,9 +49,9 @@ Select [Header File (.h)] and click [Add].
 extern "C" int PASCAL EXPORT Add2(int a, int b);	// C
 /*-------------------------------------------------------------------------------------------------
 On the menu bar, click [File]>[Close Solution]. Then, come back to the solution, {MFCApplication1}.
-On the {IDD_MFCAPPLICATION1_DIALOG}, set the second button as below.
+On the {IDD_MFCAPPLICATION1_DIALOG}, set the Button2 as below.
 	- [Caption]: Add2
-And double-click it.
+And, double-click Button2.
 Then, write the code below in the {MFCApplication1Dlg.cpp} file.
 -------------------------------------------------------------------------------------------------*/
 #include "../MFCLibrary1/Header.h"			// C
