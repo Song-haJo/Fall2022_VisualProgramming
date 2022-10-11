@@ -15,17 +15,17 @@ In the "Class View," click "CLPenDoc" to open "LPenDoc.h" file.
 Write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
 // Attributes			// L; location
-public:				    // L
-    CObArray m_oa;			// C; Code
+public:				// L
+    CObArray m_oa;		// C; Code
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Class View," select "CLPenDoc" and click "Serialize(CArchive & ar)" to open "LPenDoc.cpp" file.
 Write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
-// CLPenDoc serialization		        // L
+// CLPenDoc serialization		// L
 void CLPenDoc::Serialize(CArchive& ar)	// L
-{				                        // L
+{				        // L
     m_oa.Serialize(ar);			// C
-}				                        // L
+}				        // L
 /*-----------------------------------------------------------------------------------------------------------------
 Through the shortcut "Ctrl+Shift+X," open the "Class Wizard."
 In the "Add Class..." combo box, click "MFC Class..."
@@ -34,31 +34,31 @@ In the "Add MFC Class" dialog, set as below and click "OK."
 	- [Base class] > CObject
 In the "CLine.h" file, write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
-#pragma once				    // L
+#pragma once			// L
 
-// CLine command target			// L
+// CLine command target		// L
 class CLine : public CObject	// L
-{					            // L
-public:					        // L
+{				// L
+public:				// L
     CLine(CPoint From, CPoint To, int Size, COLORREF Col)	// C
-    {						                                // C
-		m_From = From;				                        // C
-		m_To = To;				                            // C
-		m_Size = Size;			                        	// C
-		m_Col = Col;			                        	// C
-	}						                                // C
-	void Draw(CDC* pDC)			                        	// C
-	{					                                	// C
-		CPen pen(PS_SOLID, m_Size, m_Col);	            	// C
-		pDC->SelectObject(&pen);		                	// C
-		pDC->MoveTo(m_From);		                    	// C
-		pDC->LineTo(m_To);		                        	// C
-	}						                                // C
+    {						                // C
+		m_From = From;				        // C
+		m_To = To;				        // C
+		m_Size = Size;			                // C
+		m_Col = Col;			                // C
+	}						        // C
+	void Draw(CDC* pDC)			                // C
+	{					                // C
+		CPen pen(PS_SOLID, m_Size, m_Col);	        // C
+		pDC->SelectObject(&pen);		        // C
+		pDC->MoveTo(m_From);		                // C
+		pDC->LineTo(m_To);		                // C
+	}						        // C
 	CLine();			    	// L
 	virtual ~CLine();			// L
-	CPoint m_From, m_To;	                    			// C
-	COLORREF m_Col;		                        			// C
-	int m_Size;				                               	// C
+	CPoint m_From, m_To;	                    		// C
+	COLORREF m_Col;		                        	// C
+	int m_Size;				                // C
 }				            	// L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Class View," select "CLine" and click "<Add> Serialize" in the combo box of "[Properties] > [Overrides]."
