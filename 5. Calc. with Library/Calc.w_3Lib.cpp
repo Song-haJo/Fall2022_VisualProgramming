@@ -157,7 +157,7 @@ And, double-click Button3.
 Then, write the code below in the {MFCApplication1Dlg.cpp} file.
 -------------------------------------------------------------------------------------------------*/
 #include "../MFCLibrary2/Header.h"			// C
-void CMFCApplication1Dlg::OnBnClickedButton2()		//
+void CMFCApplication1Dlg::OnBnClickedButton3()		//
 {							//
 	// TODO: Add your control notification handler code here
 	int a, b, c;					// C
