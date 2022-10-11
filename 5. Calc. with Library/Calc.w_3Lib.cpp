@@ -1,4 +1,25 @@
 /*-------------------------------------------------------------------------------------------------
+Click [Create a new project] and select [Static Library].
+Click [Next] and keep the project name as "StaticLib1." Then, click [Create].
+Write the code below in the {StaticLib1.cpp} file.
+-------------------------------------------------------------------------------------------------*/
+// TODO: This is an example of a library function		//
+void fnStaticLib1()						//
+{								//
+}								//
+								//
+int Add1(int a, int b)						// C
+{								// C
+	return a + b;						// C
+}								// C
+/*-------------------------------------------------------------------------------------------------
+On the Solution Explorer, right-click the [Header Files] and click [Add]>[New Item...].
+Select [Header File (.h)] and click [Add].
+Add the code below in the {Header.h} file.
+-------------------------------------------------------------------------------------------------*/
+#pragma once
+int Add1(int a, int b);
+/*-------------------------------------------------------------------------------------------------
 On the menu bar, click [File]>[Close Solution]. Then, click [Create a new project].
 Select [MFC App] and click [Next].
 Keep the project name as "MFCApplication1" and the location as the same directory.
@@ -9,8 +30,24 @@ Remove {IDC_STATIC1 (Text Control)} and add three {Edit Control}s and three {But
 Set the Button1 as below.
 	- [Caption]: Add1
 -------------------------------------------------------------------------------------------------*/
-
+#include "../StaticLib1/Header.h"			// C
+void CMFCApplication1Dlg::OnBnClickedButton1()		//
+{							//
+	// TODO: Add your control notification handler code here
+	int a, b, c;					// C
+	a = GetDlgItemInt(IDC_EDIT1);			// C
+	b = GetDlgItemInt(IDC_EDIT2);			// C
+	c = Add1(a, b);					// C
+	SetDlgItemInt(IDC_EDIT3, c);			// C
+}							//
 /*-------------------------------------------------------------------------------------------------
+On the Solution Explorer, right-click the [MFCApplication1] and click [Add]>[Existing Item...].
+Select [StaticLib1]>[x64]>[Debug]>{StaticLib1.lib} and click [Add].
+Now, the function Add1 works.
+-------------------------------------------------------------------------------------------------*/
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*-------------------------------------------------------------------------------------------------
+Click [Create a new project].
 Select [MFC Dynamic-Link Library] and click [Next].
 Keep the project name as "MFCLibrary1" and click [Create]. Then, set as below.
 	- [DLL type]: Regular DLL using shared MFC DLL
@@ -43,6 +80,7 @@ extern "C" int PASCAL EXPORT Add2(int a, int b) {	// C
 /*-------------------------------------------------------------------------------------------------
 On the Solution Explorer, right-click the [Header Files] and click [Add]>[New Item...].
 Select [Header File (.h)] and click [Add].
+Add the code below in the {Header.h} file.
 -------------------------------------------------------------------------------------------------*/
 #pragma once					//
 #include "pch.h"					// C
