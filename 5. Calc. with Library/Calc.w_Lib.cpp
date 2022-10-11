@@ -13,17 +13,17 @@ EXPORTS								//
 /*-------------------------------------------------------------------------------------------------
 Then, write the code below in the {MFCLibrary1.cpp} file. (Solution Explorer>SourceFiles)
 -------------------------------------------------------------------------------------------------*/
-// CMFCLibrary1App initialization			//
+// CMFCLibrary1App initialization		//
 						//
-BOOL CMFCLibrary1App::InitInstance()			//
+BOOL CMFCLibrary1App::InitInstance()		//
 {						//
-	CWinApp::InitInstance();			//
+	CWinApp::InitInstance();		//
 						//
 	return TRUE;				//
 }						//
 						//
-extern "C" int PASCAL EXPORT Add(int a, int b) {		// C
+extern "C" int PASCAL EXPORT Add(int a, int b) {	// C
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());	// C
 	// normal function body here			// C
-	return (a + b);				// C
-}						// C
+	return (a + b);					// C
+}							// C
