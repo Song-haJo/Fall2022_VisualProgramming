@@ -27,3 +27,10 @@ extern "C" int PASCAL EXPORT Add(int a, int b) {	// C
 	// normal function body here			// C
 	return (a + b);					// C
 }							// C
+/*-------------------------------------------------------------------------------------------------
+On the Solution Explorer, right-click the [Header Files] and click [Add]>[New Item...].
+Select [Header File (.h)] and click [Add].
+-------------------------------------------------------------------------------------------------*/
+#pragma once					//
+						//
+extern "C" int PASCAL EXPORT Add(int a, int b);	// C
