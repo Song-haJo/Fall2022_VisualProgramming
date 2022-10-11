@@ -65,106 +65,106 @@ In the "Class View," select "CLine" and click "<Add> Serialize" in the combo box
 In the "CLine.cpp" file, write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
 // CLine.cpp : implementation file	// L
-//				                    // L
+//				        // L
 
-#include "pch.h"			        // L
-#include "LPen.h"		        	// L
-#include "CLine.h"		        	// L
+#include "pch.h"			// L
+#include "LPen.h"		        // L
+#include "CLine.h"		        // L
 	
 IMPLEMENT_SERIAL(CLine, CObject, 1)		    // C
-// CLine				            // L
+// CLine				// L
 
 /*---------------------------------------------------------------------------------------------------------------*/
-// CLine member functions			    // L
+// CLine member functions			// L
 void CLine::Serialize(CArchive& ar)		// L
-{					                    // L
-	if (ar.IsStoring())	        		// L
+{					        // L
+	if (ar.IsStoring())	        	// L
 	{	// storing code	               	// L
 		ar << m_From << m_To << m_Size << m_Col;	// C
-	}				                    // L
-	else			                	// L
+	}				        // L
+	else			                // L
 	{	// loading code	            	// L
 		ar >> m_From >> m_To >> m_Size >> m_Col;	// C
-	}				                    // L
-}					                    // L
+	}				        // L
+}					        // L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "CLine.h" file, write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
-#pragma once				    // L
+#pragma once			// L
 
-// CLine command target			// L
+// CLine command target		// L
 class CLine : public CObject	// L
-{					            // L
-	DECLARE_SERIAL(CLine)			    // C
-public:					        // L
+{				// L
+	DECLARE_SERIAL(CLine)		// C
+public:				// L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Class View," select "CLPenView" and click "<Add> OnMouseMove" in the combo box of "[Properties] > [Messages]."
 In the "LPenView.cpp" file, rite the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
-#include "LPenDoc.h"			// L
-#include "LPenView.h"			// L
-#include "CLine.h"				// C
+#include "LPenDoc.h"		// L
+#include "LPenView.h"		// L
+#include "CLine.h"			// C
 /*---------------------------------------------------------------------------------------------------------------*/
 // CLPenView message handlers		                	// L
-void CLPenView::OnMouseMove(UINT nFlags, CPoint point)	// L
-{						                                // L
-	if (nFlags & MK_LBUTTON)		               		// C
-	{						                            // C
+void CLPenView::OnMouseMove(UINT nFlags, CPoint point)	        // L
+{						                // L
+	if (nFlags & MK_LBUTTON)		                // C
+	{						        // C
 		CLine* p = new CLine(opnt, point, size, col);	// C
-		GetDocument()->m_oa.Add(p);		                // C
-		Invalidate(false);			                	// C
-	}						                            // C
-	opnt = point;					                    // C
+		GetDocument()->m_oa.Add(p);		        // C
+		Invalidate(false);			        // C
+	}						        // C
+	opnt = point;					        // C
 	CFormView::OnMouseMove(nFlags, point);          	// L
-}						                                // L
+}						                // L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "LPenView.h" file, rite the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
-// Attributes					        // L
-public:						            // L
+// Attributes					// L
+public:						// L
 	CLPenDoc* GetDocument() const;		// L
 	CPoint opnt;				// C
-	int size;					// C
+	int size;				// C
 	COLORREF col;				// C
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Class View," select "CLPenView" and  click "OnInitialUpdate()" to open "LPenView.cpp" file again.
 -----------------------------------------------------------------------------------------------------------------*/
 void CLPenView::OnInitialUpdate()			// L
-{						                    // L
+{						        // L
 	CFormView::OnInitialUpdate();			// L
 	GetParentFrame()->RecalcLayout();		// L
 	ResizeParentToFit();		        	// L
-	size = 16;					            // C
+	size = 16;					// C
 	col = RGB(0, 255, 0);			       	// C
-}						                    // L
+}						        // L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Class View," select "CLPenView" and click "<Add> OnPaint" in the combo box of "[Properties] > [Messages]."
 Write the code as below.
 -----------------------------------------------------------------------------------------------------------------*/
 	void CLPenView::OnPaint()			// L
-	{					                // L
+	{					        // L
 		CPaintDC dc(this);		      	// L
 		int n = GetDocument()->m_oa.GetSize();			// C
-		for (int i = 0; i < n; i++)				        // C
-		{						                        // C
+		for (int i = 0; i < n; i++)				// C
+		{							// C
 			CLine* p = (CLine*)GetDocument()->m_oa[i];	// C
-			p->Draw(&dc);				                // C
-		}						                        // C
-	}					                // L
+			p->Draw(&dc);				        // C
+		}						        // C
+	}					        // L
 /*-----------------------------------------------------------------------------------------------------------------
 Remove "ICD_STATIC1 (Text Control)" and make the dialog window bigger.
 In the "Class View," select "CLPenDoc" and click "OnNewDocument()" to open "LPenDoc.cpp" file again.
 -----------------------------------------------------------------------------------------------------------------*/
 	BOOL CLPenDoc::OnNewDocument()			// L
-	{					                	// L
+	{					        // L
 		if (!CDocument::OnNewDocument())	// L
-			return FALSE;			        // L
-		INT_PTR n = m_oa.GetSize();			// C
+			return FALSE;			// L
+		INT_PTR n = m_oa.GetSize();		// C
 		for (INT_PTR i = 0; i < n; i++)		// C
-			delete (m_oa[i]);		    	// C
-		m_oa.RemoveAll();			    	// C
-		return TRUE;		        		// L
-	}					                	// L
+			delete (m_oa[i]);		// C
+		m_oa.RemoveAll();			// C
+		return TRUE;		        	// L
+	}					        // L
 /*-----------------------------------------------------------------------------------------------------------------
 In the "Resource View," click "IDR_MAINFRAME" in the "Toolbar" folder.
 -----------------------------------------------------------------------------------------------------------------*/
