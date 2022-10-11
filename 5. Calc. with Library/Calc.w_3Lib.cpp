@@ -161,9 +161,10 @@ void CMFCApplication1Dlg::OnBnClickedButton3()		//
 {							//
 	// TODO: Add your control notification handler code here
 	int a, b, c;					// C
+	CMath m;					// C
 	a = GetDlgItemInt(IDC_EDIT1);			// C
 	b = GetDlgItemInt(IDC_EDIT2);			// C
-	c = Add3(a, b);					// C
+	c = m.Add3(a, b);				// C
 	SetDlgItemInt(IDC_EDIT3, c);			// C
 }							//
 /*-------------------------------------------------------------------------------------------------
