@@ -64,4 +64,10 @@ void CMFCApplication1Dlg::OnBnClickedButton2()		//
 	c = Add2(a, b);					// C
 	SetDlgItemInt(IDC_EDIT3, c);			// C
 }							//
-/*
+/*-------------------------------------------------------------------------------------------------
+On the Solution Explorer, right-click the [MFCApplication1] and click [Add]>[Existing Item...].
+Select [MFCLibrary1]>[x64]>[Debug]>{MFCLibrary1.lib} and click [Add].
+Then, copy the [MFCLibrary1]>[x64]>[Debug]>{MFCLibrary1.dll}.
+Paste in the [MFCApplication1]>[x64]>[Debug] folder.
+Now, the function Add2 works.
+-------------------------------------------------------------------------------------------------*/
